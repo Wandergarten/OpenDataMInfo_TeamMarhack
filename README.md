@@ -4,7 +4,7 @@ This is the [Open Data MInfo e.V. hackathon](https://matheinfo.github.io/hackath
 
 ... to the moon!:rocket:
 
-Karo, Quirin, Jonny & Chris
+[@Karo](https://github.com/KaroFr), [@Quirin](https://github.com/Quirinms), [@Jonny](https://github.com/thejonnyt), [@Luis](https://github.com/WinckelData) & [@Chris](https://github.com/Wandergarten)
 
 # Repo Structure: 
 - Code: consists of collaboratory R and Python scripts
