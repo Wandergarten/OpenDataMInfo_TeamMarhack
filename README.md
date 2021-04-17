@@ -1,6 +1,6 @@
-# :computer: Open Data MInfo e.V. Hackathon Team #Marhack
+# Team #Marhack @ :computer: Open Data MInfo e.V. Hackathon 
 
-This is the [Open Data MInfo e.V. hackathon](https://matheinfo.github.io/hackathon/)'s repository of Team Marhack. We are four students from Philipps-University Marburg (DE): 
+This is the [Open Data MInfo e.V. hackathon](https://matheinfo.github.io/hackathon/)'s repository of Team Marhack. We are four students from [Philipps-University Marburg (DE)](https://www.uni-marburg.de/): 
 
 ... to the moon!:rocket:
 
