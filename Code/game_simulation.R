@@ -77,7 +77,7 @@ for (i in 1:1000) {
                                                     cbind(player2_id = player_profiles[players[2], player]))
 }
 
-fwrite(game_simulation_data, "./game_simulation_data.csv")
+fwrite(game_simulation_data, "./Data/game_simulation_data.csv")
 
 # n=punktwechsel
 
