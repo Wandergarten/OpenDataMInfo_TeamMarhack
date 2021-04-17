@@ -11,3 +11,6 @@ Repo Structure:
 - Presentation: consists of use case presentation
 - Data: consists of generated data files, preferrably of type .csv 
 - License
+
+
+# Internal Documentation: [Etherpad](https://etherpad.studiumdigitale.uni-frankfurt.de/p/Marhack#)
