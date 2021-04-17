@@ -9,8 +9,10 @@ Karo, Quirin, Jonny & Chris
 # Repo Structure: 
 - Code: consists of collaboratory R and Python scripts
 - Presentation: consists of use case presentation
-- Data: consists of generated data files, preferrably of type .csv 
+- Data: consists of generated data files (i.e. CSV) and video procession temporary frames (i.e. PNG)
 - License
 
 
 # Internal Documentation: [Etherpad](https://etherpad.studiumdigitale.uni-frankfurt.de/p/Marhack#)
+
+# Sample Video: [Boll v Long 2017](https://www.youtube.com/watch?v=Gdp3-6UCrOQ)
