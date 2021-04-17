@@ -1,17 +1,24 @@
 library(data.table)
 library(magrittr)
+library(ggplot2)
 dt <- read.csv(file = "./Universität Leipzig/Marhack/OpenDataMInfo_TeamMarhack/Data/game_simulation_data.csv")
 dt <- data.table(dt)
+dt$game_date <- as.Date(dt[,game_date])
 
-## wie schnell werden die spiele gewonnen:
 chosen_player = c("Luis", "Karo", "Jonny", "Chris", "Quirin", "Otto")[4]
 
+# Q1: how fast do you win games: ----
+
+# extract all games in which you played
 chosen_player_dt <- dt[player1_id == chosen_player | player2_id == chosen_player]
 
-## winning games for chosen player.
-winnings <- chosen_player_dt[(player1>=21 & player1_id == chosen_player) | (player2>=21 & player2_id == chosen_player),]
+# extract the games you won
+winnings <- chosen_player_dt[(player1>=21 & player1_id == chosen_player) | (player2>=21 & player2_id == chosen_player)]
 
-hist(winnings[,time_stamp])
+# the game length of won games is just the 'final' time_stamp_value.
+
+ggplot(melt(winnings, measure.vars = c('time_stamp', 'game_date'), id.vars = 'game_id'))+
+  
 
 ## wie lang sind die winstreaks:
 
@@ -82,5 +89,6 @@ endscores <- endscores[on_defense_strengh,on='game_id']
 
 
 ## time series
+
 
 
