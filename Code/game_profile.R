@@ -44,14 +44,14 @@ game_simulation <- function(player_skill1, player_skill2, player_to_start) {
                                          player2 = player2_score,
                                          time_stamp = time_stamp,
                                          time_to_score = time_to_score,
-                                         who_serves = who_serves,
+                                         who_serves = who_serves + 1,
                                          who_scores = ifelse(tmp_player1 == 1, 1, 2),
                                          player_skill1 = player_skill1,
                                          player_skill2 = player_skill2)
     who_serves <- ifelse((player1_score + player2_score) %% 5 == 0, abs(who_serves - 1), who_serves)
     game_data <- rbind(game_data, new_game_data_entry)
   }
-  return(game_data %>% cbind(game_date = sample(seq(as.Date('2020/04/17'), as.Date('2021/04/17'), by = "day"), 1)))
+  return(game_data %>% cbind(game_date = sample(seq(as.Date('2020/06/01'), as.Date('2021/06/01'), by = "day", replace = TRUE), 1)))
 }
 ###################################################################################
 ## Data Simulation
@@ -64,7 +64,7 @@ player_profiles <- data.table(skill = ceiling(runif(6, 0, 3)), player = c("Luis"
 ## exemplary game stats through game simulation
 game_simulation_data <- data.table()
 
-for (i in 1:1000) {
+for (i in 1:601) {
   # simulate 200 games with different player pairings.
   players <- sample(1:6, 2)
 
