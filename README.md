@@ -1,4 +1,4 @@
-# OpenDataMInfo_TeamMarhack
+# Open Data MInfo Hackathon Team #Marhack
 
 This is the [Open Data Minfo 2021 hackathon](https://matheinfo.github.io/hackathon/)'s repository of Team Marhack. We are four students from Philipps-University Marburg (DE): 
 
