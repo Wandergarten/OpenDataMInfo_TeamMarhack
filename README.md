@@ -6,8 +6,11 @@ This is the [Open Data MInfo e.V. hackathon](https://matheinfo.github.io/hackath
 
 Karo, Quirin, Jonny & Chris
 
-Repo Structure: 
+# Repo Structure: 
 - Code: consists of collaboratory R and Python scripts
 - Presentation: consists of use case presentation
 - Data: consists of generated data files, preferrably of type .csv 
 - License
+
+
+# Internal Documentation: [Etherpad](https://etherpad.studiumdigitale.uni-frankfurt.de/p/Marhack#)
