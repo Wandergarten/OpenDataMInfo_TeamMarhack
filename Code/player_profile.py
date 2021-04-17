@@ -1,3 +1,6 @@
+# brauchen wir nicht, ist angedacht als OO-Ansatz für App ..
+
+
 class player_profile(object):
     """Class for the User Profile
     from wich specific player statistics can be derived"""
