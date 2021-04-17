@@ -13,6 +13,18 @@ get_streak <- function(dt,player,input_date,streak = 0){
     }
 }
 
+get_longest_streak <- function(dt,player){
+    start_date = as.Date(sort(unique(dt[,game_date]))[1])
+    end_date = as.Date(sort(unique(dt[,game_date]),decreasing = TRUE)[1])
+    longest_streak = 0
+    for (x in seq(end_date,start_date,by = -1)){
+        streak = get_streak(dt,player,x)
+        if (streak > longest_streak){ # Can be optimized by skipping all next days already includede in the streak
+            longest_streak = streak
+        }
+    }
+    return(longest_streak)
+}
 
 
 
@@ -21,3 +33,5 @@ get_streak <- function(dt,player,input_date,streak = 0){
 dt <- read.csv(file = "./Data/game_simulation_data.csv")
 dt <- data.table(dt)
 get_streak(dt,"Luis","2020-09-01")
+get_longest_streak(dt,"Luis")
+get_longest_streak(dt,"Chris")
