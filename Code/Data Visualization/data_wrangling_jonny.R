@@ -89,7 +89,9 @@ gg_points <-ggplot(player_score_walk,
   ylab("Points") +
   ylim(-max(player_score_walk$score), max(player_score_walk$score)) + 
   ggtitle("Points")
-ggplotly(gg_points)
+fig <- ggplotly(gg_points)
+fig <- fig %>% layout(hovermode = "x unified")
+fig
 
 # concentration/spielfluss (wie lang von punkt zu punkt)
 chosen_player_dt[, time_to_score]

@@ -52,9 +52,9 @@ get_strongest_opponent <- function(stats, player) {
 }
 
 ######################## POC ###################################
-dt <- read.csv(file = "./Data/game_simulation_data.csv")
+dt <- read.csv(file = "game_simulation_data.csv")
 dt <- data.table(dt)
 stats <- calc_stats(dt)
-player = "Karo"
+player = "Chris"
 get_weakest_opponent(stats, player)
 get_strongest_opponent(stats, player)

@@ -1,5 +1,5 @@
 ---
-title: "Präsentation"
+title: "Pongtastic"
 output: html_document
 ---
 
@@ -10,10 +10,15 @@ library(ggplot2)
 library(reshape2)
 library(plyr)
 library(plotly)
+
 ```
 
-## MInfo e.V. Hackathon
-### by Team MarHack: Jonny, Quirin, Chris, Luis, Karo
+### Team MarHack: Jonny, Quirin, Chris, Luis, Karo
+
+## The Idea
+```{r idea, echo=FALSE, out.width = '25%'}
+knitr::include_graphics("Handy.png")
+```
 
 ## Data Example
 

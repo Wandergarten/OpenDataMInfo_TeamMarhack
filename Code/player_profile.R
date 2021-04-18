@@ -3,6 +3,8 @@ library(ggplot2)
 library(reshape2)
 library(plyr)
 library(plotly)
+install.packages('pandoc')
+library(pandoc)
 
 dt <- data.table(read.csv(file = "game_simulation_data.csv"))
 #wich player wins
