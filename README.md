@@ -15,4 +15,4 @@ This is the [Open Data MInfo e.V. hackathon](https://matheinfo.github.io/hackath
 
 # Internal Documentation: [Etherpad](https://etherpad.studiumdigitale.uni-frankfurt.de/p/Marhack#)
 
-# Sample Video: [Boll v Long 2017](https://www.youtube.com/watch?v=Gdp3-6UCrOQ)
+# Sample Video: [TT Gold Medal Olympic Games 2008 Beijing](https://www.youtube.com/watch?v=uiAS444OpRM)
