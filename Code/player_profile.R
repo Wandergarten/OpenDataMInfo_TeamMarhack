@@ -3,7 +3,6 @@ library(ggplot2)
 library(reshape2)
 library(plyr)
 library(plotly)
-install.packages('vctrs')
 
 dt <- data.table(read.csv(file = "game_simulation_data.csv"))
 #wich player wins
@@ -54,7 +53,6 @@ ggplot(mean_duration_melt, aes(x = player, y = value)) +
   geom_bar(stat = 'identity', width=0.6, fill="steelblue") + 
   labs(title = "Plot of the mean duration of one game in minutes", x = "Player", y = "Mean Duration") + 
   geom_text(aes(label = value), vjust=1.6, color="white") +
-  #xlim(14.5:16) +
   theme_classic()
 ###############################################################################
 # number of rounds per game
@@ -83,17 +81,14 @@ rownames(love_matrix) <- players
 
 #plot it
 love_melt <- melt(love_matrix)
-names(love_melt)[3] <- "Amount"
-ggplot(love_melt, aes(x = Var2, y = Var1)) +
+names(love_melt) <- c("Player_1", "Player_2", "Amount")
+love_plot <- ggplot(love_melt, aes(x = Player_1, y = Player_2)) +
   geom_raster(aes(fill = Amount)) +
   geom_text(aes(label = Amount), color = "white") +
   scale_fill_gradient(low="white", high="#660000") +
   labs(x="", y="", title="Who played with whom") +
-  theme_bw() + 
-  theme(axis.text.x=element_text(size=9, angle=0, vjust=0.3),
-        axis.text.y=element_text(size=9),
-        plot.title=element_text(size=16))
-
+  theme_bw()
+ggplotly(love_plot)
 ###############################################################################
 # number of games per Session/Day
 ###############################################################################
