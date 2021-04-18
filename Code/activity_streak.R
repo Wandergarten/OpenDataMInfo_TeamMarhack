@@ -34,5 +34,4 @@ get_longest_streak <- function(dt, player) {
 dt <- read.csv(file = "./Data/game_simulation_data.csv")
 dt <- data.table(dt)
 get_streak(dt, "Luis", "2020-09-01")
-get_longest_streak(dt, "Luis")
 get_longest_streak(dt, "Chris")
