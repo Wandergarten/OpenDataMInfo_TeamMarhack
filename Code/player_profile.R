@@ -2,12 +2,14 @@ library(data.table)
 library(ggplot2)
 library(reshape2)
 library(plyr)
+library(plotly)
+install.packages('vctrs')
 
 dt <- data.table(read.csv(file = "game_simulation_data.csv"))
 #wich player wins
-dt[,winner := ifelse(max(player1)==21, player1_id, player2_id), by = game_id]
-dt[(player1==21 | player2==21), mean_duration_player1 := mean(time_stamp), by = player1_id]
-dt[(player1==21 | player2==21), mean_duration_player2 := mean(time_stamp), by = player2_id]
+#dt[,winner := ifelse(max(player1)==21, player1_id, player2_id), by = game_id]
+#dt[(player1==21 | player2==21), mean_duration_player1 := mean(time_stamp), by = player1_id]
+#dt[(player1==21 | player2==21), mean_duration_player2 := mean(time_stamp), by = player2_id]
 
 players = c("Luis", "Karo", "Jonny", "Chris", "Quirin", "Otto")
 player_stat <- data.table()
@@ -52,16 +54,17 @@ ggplot(mean_duration_melt, aes(x = player, y = value)) +
   geom_bar(stat = 'identity', width=0.6, fill="steelblue") + 
   labs(title = "Plot of the mean duration of one game in minutes", x = "Player", y = "Mean Duration") + 
   geom_text(aes(label = value), vjust=1.6, color="white") +
+  #xlim(14.5:16) +
   theme_classic()
 ###############################################################################
 # number of rounds per game
 ###############################################################################
-dt[,rounds_per_game := .N, by = list(game_id, game_date)]
+#dt[,rounds_per_game := .N, by = list(game_id, game_date)]
 
 ###############################################################################
 # total number of games per day
 ###############################################################################
-dt[(player1==21 | player2==21), games_per_day := .N, by = C(player1_id)]
+#dt[(player1==21 | player2==21), games_per_day := .N, by = C(player1_id)]
 
 ###############################################################################
 # number of games per couple
@@ -102,8 +105,4 @@ for (i in 1:length(players)) {
 }
 player_stat <- cbind(player_stat, games_per_day = games_per_day)
 names(player_stat)[5] <- "games_per_day"
-
-
-
-
 
