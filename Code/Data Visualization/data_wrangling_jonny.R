@@ -6,6 +6,7 @@ library(plotly)
 dt <- read.csv(file = "./Universität Leipzig/Marhack/OpenDataMInfo_TeamMarhack/Data/game_simulation_data.csv")
 dt <- data.table(dt)
 dt$game_date <- as.Date(dt[,game_date])
+dt[,winner := ifelse(max(player1)==21, player1_id, player2_id), by = game_id]
 
 chosen_player = c("Luis", "Karo", "Jonny", "Chris", "Quirin", "Otto")[4]
 chosen_player2 = c("Luis", "Karo", "Jonny", "Chris", "Quirin", "Otto")[1]
